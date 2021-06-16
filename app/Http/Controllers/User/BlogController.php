@@ -214,8 +214,8 @@ class BlogController extends Controller
     }
 
     public function cetak($id){
-        $blog = Blog::find($id)->first();
-        $pdf = PDF::loadview('user.cetak_pdf', compact('blog'));
-        return redirect()->view('cetak_pdf');
+        $blog = Blog::find($id)->get();
+        $pdf = PDF::loadview('cetak_pdf', compact('blog'));
+        return redirect()->route('cetak');
     }
 }

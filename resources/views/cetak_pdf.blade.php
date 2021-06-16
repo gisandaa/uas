@@ -6,7 +6,7 @@
 <center><h5>Cetak Artikel</h4></center>
 <table class='table table-bordered'><thead><tr><th>No</th><th>Judul</th><th>Isi</th><th>Gambar</th></tr></thead>
 <tbody>
-@foreach($blogs as $a)
+@foreach($blog as $a)
 <tr>
 <td>{{$a->id}}</td>
 <td>{{$a->title}}</td>

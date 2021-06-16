@@ -46,7 +46,7 @@ Route::get('/article/{id}',
 )->name('profile');
 
 Auth::routes();
-Route::get('/blog/cetak_pdf/{id}', [ App\Http\Controllers\BlogController::class, 'cetak'])->name('cetak');
+Route::get('/blog/cetak_pdf/{id}', [ App\Http\Controllers\User\BlogController::class, 'cetak'])->name('cetak');
 Route::resource('blog', BlogController::class);
 
 // Route::resource('user', UserController::class);
